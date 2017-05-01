@@ -1,0 +1,57 @@
+{
+  "name": "paper-rulings",
+  "version": "0.0.0",
+  "description": "Measurements and information about paper rulings",
+  "main": "index.js",
+  "repository": "fdesjardins/paper-rulings",
+  "author": {
+    "name": "Forrest Desjardins",
+    "email": "desjardinsfg@gmail.com",
+    "url": "github.com/fdesjardins"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {
+    "test": "eslint *.js && nyc ./node_modules/.bin/mocha --opts mocha.opts test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "paper",
+    "stationery",
+    "rulings",
+    "spacing",
+    "lines",
+    "sizes",
+    "printing",
+    "measurements",
+    "distance",
+    "information",
+    "lined paper",
+    "college rule",
+    "wide rule"
+  ],
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.3.0",
+    "nyc": "^10.3.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}
