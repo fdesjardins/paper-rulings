@@ -76,8 +76,12 @@ module.exports = (ruling, options) => {
   }
 
   if (options !== undefined) {
-    if (options.format === 'decimal') {
-      out = Object.assign({}, out, { spacing: spacingToDecimal(out.spacing) })
+    if (options.format !== undefined) {
+      if (options.format === 'decimal') {
+        out = Object.assign({}, out, { spacing: spacingToDecimal(out.spacing) })
+      } else if (options.format !== 'fraction') {
+        throw new Error('only "decimal" or "fraction" are accepted formats')
+      }
     }
   }
 

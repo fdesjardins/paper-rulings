@@ -59,7 +59,6 @@ describe('paper-ruling', () => {
         legal: paperRuling('legal', { format: 'decimal' }),
         pitman: paperRuling('pitman', { format: 'decimal' })
       }
-      console.log(cases)
       assert(cases.narrow.spacing === `${Fraction('1/4')} in`)
       assert(cases.college.spacing === `${Fraction('9/32')} in`)
       assert(cases.gregg.spacing === `${Fraction('11/32')} in`)
@@ -67,5 +66,16 @@ describe('paper-ruling', () => {
       assert(cases.pitman.spacing === `${Fraction('1/2')} in`)
       done()
     })
+  })
+
+  it('should not accept unknown formats', done => {
+    assert.throws(() => paperRuling('narrow', { format: 'unknown' }))
+    done()
+  })
+
+  it('should accept known formats', done => {
+    assert(paperRuling('narrow', { format: 'fraction' }) !== undefined)
+    assert(paperRuling('narrow', { format: 'decimal' }) !== undefined)
+    done()
   })
 })
