@@ -1,6 +1,7 @@
 # paper-rulings
 
 [![Build Status][travis-image]][travis-url]
+[![NPM Version][npm-image]][npm-url]
 [![Coverage][coveralls-image]][coveralls-url]
 
 Measurements and information about paper rulings
@@ -77,6 +78,8 @@ One of the following:
 
 MIT © [Forrest Desjardins](https://github.com/fdesjardins)
 
+[npm-url]: https://www.npmjs.com/package/paper-rulings
+[npm-image]: https://img.shields.io/npm/v/paper-rulings.svg?style=flat
 [travis-url]: https://travis-ci.org/fdesjardins/paper-rulings
 [travis-image]: https://img.shields.io/travis/fdesjardins/paper-rulings.svg?style=flat
 [coveralls-url]: https://coveralls.io/r/fdesjardins/paper-rulings
