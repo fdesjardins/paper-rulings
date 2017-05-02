@@ -17,7 +17,7 @@ npm install --save paper-rulings
 ```javascript
 const paperRulings = require('paper-rulings')
 
-console.log(JSON.stringify(paperRulings('gregg', { format: 'decimal' }), null, 2))
+console.log(JSON.stringify(paperRulings('gregg', { format: 'decimal', units: 'mm' }), null, 2))
 ```
 
 ### Output
@@ -27,7 +27,7 @@ console.log(JSON.stringify(paperRulings('gregg', { format: 'decimal' }), null, 2
   "names": [
     "Gregg"
   ],
-  "spacing": "0.34375 in",
+  "spacing": "8.730823935791932 mm",
   "margins": [
     {
       "left": "50%"
@@ -69,6 +69,21 @@ One of the following:
 
 - fraction
 - decimal
+
+##### `options.units`
+
+Specify the output measurement units
+
+Type: `string`
+
+One of the following:
+
+- mm
+- cm
+- m
+- in
+- ft
+- mi
 
 ## Resources
 
