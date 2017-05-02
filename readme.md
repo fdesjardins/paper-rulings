@@ -89,6 +89,21 @@ One of the following:
 
 - https://en.wikipedia.org/wiki/Ruled_paper
 
+## Change Log
+
+#### [v1.2.0] - 2017-04-30
+
+- added unit conversions and `units` field in `options`
+
+#### [v1.1.0] - 2017-04-30
+
+- added decimal/fraction output formats and `format` field in `options`
+- improved options validation and handling
+
+#### [v1.0.0] - 2017-04-30
+
+- initial release
+
 ## License
 
 MIT © [Forrest Desjardins](https://github.com/fdesjardins)
@@ -99,3 +114,7 @@ MIT © [Forrest Desjardins](https://github.com/fdesjardins)
 [travis-image]: https://img.shields.io/travis/fdesjardins/paper-rulings.svg?style=flat
 [coveralls-url]: https://coveralls.io/r/fdesjardins/paper-rulings
 [coveralls-image]: https://img.shields.io/coveralls/fdesjardins/paper-rulings.svg?style=flat
+
+[v1.2.0]: https://github.com/fdesjardins/paper-rulings/compare/v1.1.0...v1.2.0
+[v1.1.0]: https://github.com/fdesjardins/paper-rulings/compare/v1.0.0...v1.1.0
+[v1.0.0]: https://github.com/fdesjardins/paper-rulings/tree/v1.0.0
