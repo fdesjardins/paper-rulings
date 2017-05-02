@@ -1,4 +1,5 @@
 const Fraction = require('fraction.js')
+const convertUnits = require('convert-units')
 
 const rulings = {
   narrow: {
@@ -52,6 +53,17 @@ const spacingToDecimal = spacing => {
   return `${Fraction(spacing.split(' ')[0]) + 0} ${spacing.split(' ')[1]}`
 }
 
+const spacingToFraction = spacing => {
+  return `${Fraction(spacing.split(' ')[0]).toFraction()} ${spacing.split(' ')[1]}`
+}
+
+const convertRulingUnits = (spacing, units) => {
+  const originalValue = Fraction(spacing.split(' ')[0])
+  const originalUnits = spacing.split(' ')[1]
+  const convertedValue = convertUnits(originalValue).from(originalUnits).to(units)
+  return `${convertedValue} ${units}`
+}
+
 module.exports = (ruling, options) => {
   const input = ruling
     .toString()
@@ -76,12 +88,23 @@ module.exports = (ruling, options) => {
   }
 
   if (options !== undefined) {
+    // perform unit conversions
+    if (options.units !== undefined) {
+      out = Object.assign({}, out, { spacing: convertRulingUnits(out.spacing, options.units) })
+    }
+
+    // then format the answer
     if (options.format !== undefined) {
       if (options.format === 'decimal') {
         out = Object.assign({}, out, { spacing: spacingToDecimal(out.spacing) })
       } else if (options.format !== 'fraction') {
         throw new Error('only "decimal" or "fraction" are accepted formats')
+      } else {
+        out = Object.assign({}, out, { spacing: spacingToFraction(out.spacing) })
       }
+    } else {
+      // ensure we get fractional answers by default
+      out = Object.assign({}, out, { spacing: spacingToFraction(out.spacing) })
     }
   }
 

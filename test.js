@@ -51,20 +51,34 @@ describe('paper-ruling', () => {
   })
 
   describe('options', () => {
-    it('should allow choosing decimals vs fractions', done => {
-      const cases = {
-        narrow: paperRuling('narrow', { format: 'decimal' }),
-        college: paperRuling('college', { format: 'decimal' }),
-        gregg: paperRuling('gregg', { format: 'decimal' }),
-        legal: paperRuling('legal', { format: 'decimal' }),
-        pitman: paperRuling('pitman', { format: 'decimal' })
-      }
-      assert(cases.narrow.spacing === `${Fraction('1/4')} in`)
-      assert(cases.college.spacing === `${Fraction('9/32')} in`)
-      assert(cases.gregg.spacing === `${Fraction('11/32')} in`)
-      assert(cases.legal.spacing === `${Fraction('11/32')} in`)
-      assert(cases.pitman.spacing === `${Fraction('1/2')} in`)
-      done()
+    describe('formats', () => {
+      it('should allow choosing decimals vs fractions', done => {
+        const cases = {
+          narrow: paperRuling('narrow', { format: 'decimal' }),
+          college: paperRuling('college', { format: 'decimal' }),
+          gregg: paperRuling('gregg', { format: 'decimal' }),
+          legal: paperRuling('legal', { format: 'decimal' }),
+          pitman: paperRuling('pitman', { format: 'decimal' })
+        }
+        assert(cases.narrow.spacing === `${Fraction('1/4')} in`)
+        assert(cases.college.spacing === `${Fraction('9/32')} in`)
+        assert(cases.gregg.spacing === `${Fraction('11/32')} in`)
+        assert(cases.legal.spacing === `${Fraction('11/32')} in`)
+        assert(cases.pitman.spacing === `${Fraction('1/2')} in`)
+        done()
+      })
+    })
+
+    describe('units', () => {
+      it('should allow choosing units', done => {
+        const mm = paperRuling('college', { format: 'decimal', units: 'mm' })
+        const cm = paperRuling('college', { format: 'decimal', units: 'cm' })
+        const yd = paperRuling('college', { format: 'decimal', units: 'yd' })
+        assert(mm.spacing === '7.14340140201158 mm')
+        assert(cm.spacing === '0.7143401402011581 cm')
+        assert(yd.spacing === '0.0078125 yd')
+        done()
+      })
     })
   })
 
