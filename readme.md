@@ -22,7 +22,7 @@ console.log(JSON.stringify(paperRulings('gregg', { format: 'decimal', units: 'mm
 
 ### Output
 
-```
+```json
 {
   "names": [
     "Gregg"
