@@ -85,10 +85,6 @@ One of the following:
 - ft
 - mi
 
-## Resources
-
-- https://en.wikipedia.org/wiki/Ruled_paper
-
 ## Change Log
 
 #### [v1.2.0] - 2017-04-30
