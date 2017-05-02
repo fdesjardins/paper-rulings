@@ -1,6 +1,8 @@
 /* global describe, it */
 
 const assert = require('chai').assert
+const Fraction = require('fraction.js')
+
 const paperRuling = require('./index')
 
 describe('paper-ruling', () => {
@@ -44,6 +46,25 @@ describe('paper-ruling', () => {
     it('should accept alternative names', done => {
       assert(paperRuling('wide') !== undefined)
       assert(paperRuling('medium') !== undefined)
+      done()
+    })
+  })
+
+  describe('options', () => {
+    it('should allow choosing decimals vs fractions', done => {
+      const cases = {
+        narrow: paperRuling('narrow', { format: 'decimal' }),
+        college: paperRuling('college', { format: 'decimal' }),
+        gregg: paperRuling('gregg', { format: 'decimal' }),
+        legal: paperRuling('legal', { format: 'decimal' }),
+        pitman: paperRuling('pitman', { format: 'decimal' })
+      }
+      console.log(cases)
+      assert(cases.narrow.spacing === `${Fraction('1/4')} in`)
+      assert(cases.college.spacing === `${Fraction('9/32')} in`)
+      assert(cases.gregg.spacing === `${Fraction('11/32')} in`)
+      assert(cases.legal.spacing === `${Fraction('11/32')} in`)
+      assert(cases.pitman.spacing === `${Fraction('1/2')} in`)
       done()
     })
   })

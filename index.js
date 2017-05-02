@@ -1,3 +1,5 @@
+const Fraction = require('fraction.js')
+
 const rulings = {
   narrow: {
     names: [ 'Narrow' ],
@@ -46,25 +48,38 @@ const rulings = {
   }
 }
 
+const spacingToDecimal = spacing => {
+  return `${Fraction(spacing.split(' ')[0]) + 0} ${spacing.split(' ')[1]}`
+}
+
 module.exports = (ruling, options) => {
   const input = ruling
     .toString()
     .toLowerCase()
     .trim()
 
+  let out
   if (input === 'narrow') {
-    return rulings.narrow
+    out = rulings.narrow
   }
   if (input === 'college' || input === 'medium') {
-    return rulings.college
+    out = rulings.college
   }
   if (input === 'gregg') {
-    return rulings.gregg
+    out = rulings.gregg
   }
   if (input === 'legal' || input === 'wide') {
-    return rulings.college
+    out = rulings.legal
   }
   if (input === 'pitman') {
-    return rulings.pitman
+    out = rulings.pitman
   }
+
+  if (options !== undefined) {
+    if (options.format === 'decimal') {
+      out = Object.assign({}, out, { spacing: spacingToDecimal(out.spacing) })
+    }
+  }
+
+  return out
 }

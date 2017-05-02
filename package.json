@@ -34,7 +34,9 @@
     "wide rule"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "fraction.js": "^4.0.0"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.13.1",
