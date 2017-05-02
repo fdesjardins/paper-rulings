@@ -16,7 +16,7 @@ npm install --save paper-rulings
 ```javascript
 const paperRulings = require('paper-rulings')
 
-console.log(JSON.stringify(paperRulings('gregg'), null, 2))
+console.log(JSON.stringify(paperRulings('gregg', { format: 'decimal' }), null, 2))
 ```
 
 ### Output
@@ -26,7 +26,7 @@ console.log(JSON.stringify(paperRulings('gregg'), null, 2))
   "names": [
     "Gregg"
   ],
-  "spacing": "11/32 in",
+  "spacing": "0.34375 in",
   "margins": [
     {
       "left": "50%"
@@ -38,7 +38,7 @@ console.log(JSON.stringify(paperRulings('gregg'), null, 2))
 
 ## API
 
-### `paperRulings(rulingName)`
+### `paperRulings(rulingName, options)`
 
 #### `rulingName`
 
@@ -53,6 +53,21 @@ One of the following:
 - Legal
 - Gregg
 - Pitman
+
+#### `options`
+
+Type: `object`
+
+##### `options.format`
+
+Allows you to specify the output values formats
+
+Type: `string`
+
+One of the following:
+
+- fraction
+- decimal
 
 ## Resources
 
