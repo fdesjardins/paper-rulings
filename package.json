@@ -1,6 +1,6 @@
 {
   "name": "paper-rulings",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Measurements and information about paper rulings",
   "main": "index.js",
   "repository": "fdesjardins/paper-rulings",
