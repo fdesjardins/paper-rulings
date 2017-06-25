@@ -10,7 +10,7 @@
     "url": "github.com/fdesjardins"
   },
   "engines": {
-    "node": ">=7.6"
+    "node": ">=7"
   },
   "scripts": {
     "test": "eslint *.js && nyc ./node_modules/.bin/mocha --opts mocha.opts test.js"
