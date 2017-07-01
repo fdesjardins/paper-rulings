@@ -46,6 +46,12 @@ const rulings = {
       }
     ],
     notes: 'Used for stenography. Includes a single margin down the center of the page.'
+  },
+  quad: {
+    names: [ 'Quad', 'Quadrille', 'Graph' ],
+    spacing: '1/4 in',
+    margins: [],
+    notes: 'A sparse grid ruling, for graphing paper.'
   }
 }
 
@@ -86,8 +92,18 @@ module.exports = (ruling, options) => {
   if (input === 'pitman') {
     out = rulings.pitman
   }
+  if (input === 'quad') {
+    out = rulings.quad
+  }
 
   if (options !== undefined) {
+    // allow custom spacing for certain rulings
+    if (input === 'quad') {
+      if (options.spacing) {
+        out.spacing = options.spacing
+      }
+    }
+
     // perform unit conversions
     if (options.units !== undefined) {
       out = Object.assign({}, out, { spacing: convertRulingUnits(out.spacing, options.units) })

@@ -26,6 +26,10 @@ describe('paper-ruling', () => {
     assert(paperRuling('Pitman') !== undefined)
     done()
   })
+  it('should have Quad ruling', done => {
+    assert(paperRuling('quad') !== undefined)
+    done()
+  })
 
   it('should not have undefined rulings', done => {
     assert(paperRuling('old gregg') === undefined)

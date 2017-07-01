@@ -54,6 +54,7 @@ One of the following:
 - Legal
 - Gregg
 - Pitman
+- Quad
 
 #### `options`
 
@@ -85,7 +86,25 @@ One of the following:
 - ft
 - mi
 
+##### `options.spacing`
+
+Quad ruling allows custom spacing
+
+Type: `string`
+
+A number followed by any of the units allowed in `options.units`
+
+Examples:
+
+- `1/2 in`
+- `10 mm`
+- `0.1 ft`
+
 ## Change Log
+
+#### [v1.3.0] - 2017-06-30
+
+- added quad ruling
 
 #### [v1.2.0] - 2017-04-30
 
