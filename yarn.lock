@@ -194,11 +194,7 @@ babel-types@^6.18.0, babel-types@^6.24.1:
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babylon@^6.11.0, babylon@^6.15.0:
-  version "6.17.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.17.0.tgz#37da948878488b9c4e3c4038893fa3314b3fc932"
-
-babylon@^6.17.4:
+babylon@^6.11.0, babylon@^6.15.0, babylon@^6.17.4:
   version "6.17.4"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.17.4.tgz#3e8b7402b88d22c3423e137a1577883b15ff869a"
 
@@ -385,9 +381,9 @@ convert-source-map@^1.3.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
 
-convert-units@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/convert-units/-/convert-units-2.2.0.tgz#a73779e023a5819f5fedcbbd663a554a9bc6ddbe"
+convert-units@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/convert-units/-/convert-units-2.3.1.tgz#4fa2f50249588bd6de5284c4d79bb462e6c32114"
   dependencies:
     lodash.foreach "2.3.x"
     lodash.keys "2.3.x"
@@ -798,9 +794,9 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fraction.js@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.2.tgz#0eae896626f334b1bde763371347a83b5575d7f0"
+fraction.js@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.3.tgz#5020a51c31fd021f2a8e2fe774373cc860e42c71"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -854,7 +850,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@7.1.1, glob@^7.0.5, glob@^7.0.6:
+glob@7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -865,7 +861,7 @@ glob@7.1.1, glob@^7.0.5, glob@^7.0.6:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.3, glob@^7.1.2:
+glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
