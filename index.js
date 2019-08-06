@@ -3,12 +3,12 @@ const convertUnits = require('convert-units')
 
 const rulings = {
   narrow: {
-    names: [ 'Narrow' ],
+    names: ['Narrow'],
     spacing: '1/4 in',
     notes: 'Used to fit more lines per page, or by those with small hands.'
   },
   college: {
-    names: [ 'College', 'Medium' ],
+    names: ['College', 'Medium'],
     spacing: '9/32 in',
     margins: [
       {
@@ -18,7 +18,7 @@ const rulings = {
     notes: ''
   },
   gregg: {
-    names: [ 'Gregg' ],
+    names: ['Gregg'],
     spacing: '11/32 in',
     margins: [
       {
@@ -28,7 +28,7 @@ const rulings = {
     notes: 'Used for stenography. Includes a single margin down the center of the page.'
   },
   legal: {
-    names: [ 'Legal', 'Wide' ],
+    names: ['Legal', 'Wide'],
     spacing: '11/32 in',
     margins: [
       {
@@ -38,7 +38,7 @@ const rulings = {
     notes: 'Used by those with larger handwriting'
   },
   pitman: {
-    names: [ 'Pitman' ],
+    names: ['Pitman'],
     spacing: '1/2 in',
     margins: [
       {
@@ -48,7 +48,7 @@ const rulings = {
     notes: 'Used for stenography. Includes a single margin down the center of the page.'
   },
   quad: {
-    names: [ 'Quad', 'Quadrille', 'Graph' ],
+    names: ['Quad', 'Quadrille', 'Graph'],
     spacing: '1/4 in',
     margins: [],
     notes: 'A sparse grid ruling, for graphing paper.'
