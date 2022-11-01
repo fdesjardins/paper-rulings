@@ -1,6 +1,6 @@
 /* global describe, it */
 
-const assert = require('chai').assert
+const assert = require('assert/strict')
 const Fraction = require('fraction.js')
 
 const paperRuling = require('./index')
