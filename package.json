@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "convert-units": "^2.3.4",
-    "fraction.js": "^4.0.12"
+    "fraction.js": "^4.2.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "coveralls": "^3.0.5",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
-    "standard": "^13.1.0"
+    "chai": "^4.3.6",
+    "coveralls": "^3.1.1",
+    "mocha": "^10.1.0",
+    "nyc": "^15.1.0",
+    "standard": "^17.0.0"
   },
   "engines": {
     "node": ">=7"
